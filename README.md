@@ -1,9 +1,9 @@
 # Final Project team 17 (group work)
 **Group members:**<br/>
-**Arian Ghorbani: ghorbana@oregonstate.edu**<br/>
-**Jackson Anglin: anglinj@oregonstate.edu**<br/>
-**Ka Lun Galant Lam: lamkalu@oregonstate.edu**<br/>
-**Yuhang Zhang: zhanyuh2@oregonstate.edu**<br/>
+-  Arian Ghorbani: ghorbana@oregonstate.edu**<br/>
+-  Jackson Anglin: anglinj@oregonstate.edu**<br/>
+-  Ka Lun Galant Lam: lamkalu@oregonstate.edu**<br/>
+-  Yuhang Zhang: zhanyuh2@oregonstate.edu**<br/>
 **Final Project due 12/10/2021**<br/>
 **Demo time: 12/10/2021, 11:50am - in KEC 1109**<br/>
 
