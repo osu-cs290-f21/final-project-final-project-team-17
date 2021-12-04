@@ -19,3 +19,7 @@ app.get('/', function(req, res, next){
 app.get('*', function(req, res){
     //IMPLEMENT CUSTOM 404 PAGE?
 })
+
+app.listen(port, function () {
+    console.log("== Server is listening on port: ", port);
+  });
