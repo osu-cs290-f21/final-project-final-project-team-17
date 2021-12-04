@@ -5,7 +5,7 @@
 - Arian Ghorbani: ghorbana@oregonstate.edu
 - Jackson Anglin: anglinj@oregonstate.edu
 - Ka Lun Galant Lam: lamkalu@oregonstate.edu
-- Yuhang Zhang: zhanyuh2@oregonstate.edu**<br/>
+- Yuhang Zhang: zhanyuh2@oregonstate.edu<br/>
 
 ***This file lists everything we have yet to do for this project.***<br/>
 
