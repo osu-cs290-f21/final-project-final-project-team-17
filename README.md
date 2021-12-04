@@ -9,7 +9,7 @@
 
 This file lists everything we have yet to do for this project.
 
-**This site/application would be a simple recipe creator and storer. There’d be a “main page” that was a list of boxed elements containing any immediately identifiable information about each recipe, like cook time, image, name, etc. Each of these elements would then link to a separate HTML page on the site, created by the user, which would list the full extent of the recipe.**<br/>
+This site/application would be a simple recipe creator and storer. There’d be a “main page” that was a list of boxed elements containing any immediately identifiable information about each recipe, like cook time, image, name, etc. Each of these elements would then link to a separate HTML page on the site, created by the user, which would list the full extent of the recipe.
 ## 1.MAIN: UNFINISHED
 -  layout template (main)
 -  view for the index
