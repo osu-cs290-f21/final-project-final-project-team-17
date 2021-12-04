@@ -1,7 +1,7 @@
 # Final Project team 17 (group work)
 **Final Project due 12/10/2021**<br/>
 **Demo time: 12/10/2021, 11:50am - in KEC 1109**<br/>
-**Group members:**<br/>
+**Group members:**
 - Arian Ghorbani: ghorbana@oregonstate.edu
 - Jackson Anglin: anglinj@oregonstate.edu
 - Ka Lun Galant Lam: lamkalu@oregonstate.edu
