@@ -18,3 +18,5 @@ This site/application would be a simple recipe creator and storer. There’d be 
 -  recipe page view
 -  apply CSS to all pages (go back through HTML)
 -  serverside implementation
+## 2. image of our web
+- link
