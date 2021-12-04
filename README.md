@@ -3,7 +3,7 @@
 -  Arian Ghorbani: ghorbana@oregonstate.edu
 -  Jackson Anglin: anglinj@oregonstate.edu
 -  Ka Lun Galant Lam: lamkalu@oregonstate.edu
--  Yuhang Zhang: zhanyuh2@oregonstate.edu
+-  Yuhang Zhang: zhanyuh2@oregonstate.edu<br/>
 **Final Project due 12/10/2021**<br/>
 **Demo time: 12/10/2021, 11:50am - in KEC 1109**<br/>
 
