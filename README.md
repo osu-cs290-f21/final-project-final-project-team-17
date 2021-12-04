@@ -1,4 +1,4 @@
-# Final Project (group work)
+# Final Project team 17 (group work)
 **Group members:**<br/>
 **Arian Ghorbani: ghorbana@oregonstate.edu**<br/>
 **Jackson Anglin: anglinj@oregonstate.edu**<br/>
