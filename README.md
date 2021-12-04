@@ -9,7 +9,7 @@
 
 This file lists everything we have yet to do for this project.
 
-## MAIN: UNFINISHED
+## 1.MAIN: UNFINISHED
 -  layout template (main)
 -  view for the index
 -  partials for each recipe
