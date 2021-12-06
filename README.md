@@ -16,6 +16,7 @@ This site/application would be a simple recipe creator and storer. There’d be 
 -  partials for each recipe
 -  input view
 -  recipe page view
+- update .gitignore to ignore the template that's built once the build function works
 -  apply CSS to all pages (go back through HTML)
 -  serverside implementation
 ## 2. Image of our web

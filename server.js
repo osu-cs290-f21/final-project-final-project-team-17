@@ -11,13 +11,26 @@ app.set('view engine', 'handlebars')
 app.use(express.static('public'))
 
 app.get('/', function(req, res, next){
-    //EMPTY WHILE THERE IS NO INDEX
+    res.status(200).render('indexPage', {
+        indexPage: true,
+        recipeData
+    })
+    console.log("passed the / render")
 })
 
-//IMPLEMENT ALL OTHER PAGES BELOW
+app.get('/recipes/:recipeArr', function(req, res, next){
+    var recipeArr = req.params.recipeArr;
+    console.log('-- recipeArr: ', recipeArr)
+    if(recipeData[recipeArr]){
+        res.status(200).render('partials/newRecipe', recipeData[recipeArr])
+    }
+    else{
+        next();
+    }
+})
 
 app.get('*', function(req, res){
-    //IMPLEMENT CUSTOM 404 PAGE?
+    res.status(404).render('404Page')
 })
 
 app.listen(port, function () {
