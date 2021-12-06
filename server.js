@@ -28,6 +28,9 @@ app.get('/recipes/:recipeArr', function(req, res, next){
         next();
     }
 })
+app.get('/creating', function (req, res, next){
+  res.status(200).render('creatingRecipe');
+})
 
 app.get('*', function(req, res){
     res.status(404).render('404Page')

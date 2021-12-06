@@ -1,7 +1,7 @@
 /*
 This is a basic plan for how the site should look, nothing is final until I can actually see the result
 
-Green Candidates: 
+Green Candidates:
 1. #003a03
 2. #003813
 3. #0e240a
@@ -11,13 +11,19 @@ Brown Candidates:
 2. #3b2700
 
 */
+header{
+  background-color: green;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
 
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
 }
 
-a {
+a{
     text-decoration: none;
     color: white;
 }
@@ -35,4 +41,31 @@ a:hover {
 
 .content {
     display: flex;
+}
+
+#create-recipe-button{
+  position: fixed;
+  right: 30px;
+  top: 40px;
+  height: 60px;
+  width: 60px;
+  border: none;
+  border-radius: 30px;
+  font-size: 10px;
+  background-color: #111111;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+#create-recipe-button:hover{
+  background-color: green
+}
+
+.recipe-input-element{
+  padding: 10px;
+  margin: 30px
+  border:  5px;
+  background-color: green;
+  border-left: 6px solid yellow
 }
