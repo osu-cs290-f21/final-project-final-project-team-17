@@ -11,7 +11,7 @@ function insertNewRecipe(name, cooktime, imageURL){
 
     var newRecipeHTML = Handlebars.templates.newRecipe(newRecipeContent)
 
-    var recipeContainer = document.getElementsByClassName('recipes') //NOT IMPLEMENTED YET (need to assign ID?)
+    var recipeContainer = document.getElementsByClassName('recipes')
     recipeContainer.insertAdjacentHTML('beforeend', newRecipeHTML)
 }
 
