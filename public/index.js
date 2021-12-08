@@ -6,7 +6,8 @@ function insertNewRecipe(name, cooktime, imageURL){
     var newRecipeContent = {
         "name": name,
         "cooktime": cooktime,
-        "imageURL": imageURL
+        "imageURL": imageURL,
+        "steps": steps
     }
 
     var newRecipeHTML = Handlebars.templates.newRecipe(newRecipeContent)
