@@ -70,10 +70,10 @@ a:hover {
   border-left: 6px solid yellow
 }
 
-.recipes {
+.recipe {
   display: inline-block;
   vertical-align: top;
-  height: 330px;
+  height: 300px;
   width: 300px;
   margin: 10px;
   padding: 10px;
