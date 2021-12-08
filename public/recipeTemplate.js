@@ -22,6 +22,8 @@ templates['newRecipe'] = template({"compiler":[8,">= 4.3.0"],"main":function(con
     + alias4(((helper = (helper = lookupProperty(helpers,"name") || (depth0 != null ? lookupProperty(depth0,"name") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data,"loc":{"start":{"line":7,"column":86},"end":{"line":7,"column":94}}}) : helper)))
     + "</a>\r\n            <br><span class=\"recipe-time\">Cooktime: "
     + alias4(((helper = (helper = lookupProperty(helpers,"cooktime") || (depth0 != null ? lookupProperty(depth0,"cooktime") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"cooktime","hash":{},"data":data,"loc":{"start":{"line":8,"column":52},"end":{"line":8,"column":64}}}) : helper)))
-    + " mins</span>\r\n        </div>\r\n    </div>\r\n\r\n</div>\r\n";
+    + " mins</span>\r\n            <br><span class=\"recipe-time\">Steps: "
+    + alias4(((helper = (helper = lookupProperty(helpers,"Steps") || (depth0 != null ? lookupProperty(depth0,"Steps") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"Steps","hash":{},"data":data,"loc":{"start":{"line":9,"column":49},"end":{"line":9,"column":58}}}) : helper)))
+    + "</span>\r\n        </div>\r\n    </div>\r\n\r\n</div>\r\n";
 },"useData":true});
 })();
