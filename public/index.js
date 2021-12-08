@@ -1,12 +1,13 @@
 /* function emulating insertNewPost from assignment 5; meant to insert new recipe
  into index html*/
 
-function insertNewRecipe(name, cooktime, imageURL){
+function insertNewRecipe(name, cooktime, imageURL,instruction){
 
     var newRecipeContent = {
         "name": name,
         "cooktime": cooktime,
-        "imageURL": imageURL
+        "imageURL": imageURL,
+        "instruction": instruction
     }
 
     var newRecipeHTML = Handlebars.templates.newRecipe(newRecipeContent)
@@ -40,11 +41,11 @@ if(headerClick){
 function handleModalAcceptClick() {      //not working
 
   var photoURLNew = document.getElementById('recipe-photo-input').value.trim();
-  var stepsNew = document.getElementById('recipe-steps-input').value.trim();
+  var instructionsNew = document.getElementById('recipe-instructions-input').value.trim();
   var nameNew = document.getElementById('recipe-name-input').value;
   var cooktimeNew = document.getElementById('recipe-cooktime-input').value;
 
-  if (!photoURLNew || !stepsNew ||!nameNew ||! cooktimeNew) {
+  if (!photoURLNew || !instructionsNew ||!nameNew ||! cooktimeNew) {
     alert("You must fill in all of the fields!");
   } else {
 

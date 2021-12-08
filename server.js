@@ -34,7 +34,7 @@ app.get('/creating', function (req, res, next){
 })
 
 app.get('/about', function (req, res){
-    res.status(300).render('aboutus');
+    res.status(200).render('aboutus');
   })
 
 app.get('*', function(req, res){
