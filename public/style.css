@@ -12,7 +12,7 @@ Brown Candidates:
 
 */
 header{
-  background-color: green;
+  background-color: green ;
   display: flex;
   align-items: center;
   position: relative;
@@ -80,7 +80,9 @@ a:hover {
   border: 1px solid #dadada;
   border-radius: 3px;
 }
-
+.recipes a{
+  color: black;
+}
 .recipe-contents{
   display: flex;
   flex-direction: column;
