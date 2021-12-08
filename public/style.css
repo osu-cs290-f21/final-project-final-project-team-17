@@ -9,12 +9,10 @@ header{
 }
 
 #navBar {
-  z-index: -1;
   position: inline-block;
-  padding: 0px 0px 10px 0px;
-  width: 100%;
+  padding: 10px 0px 10px 0px;
+  width: 225px;
   background: #e04834;
-  color: white;
   height: 30px;
   margin: 0;
   font-size: 20px;
@@ -23,6 +21,7 @@ header{
 
 #buttonSpace {
   display: flex;
+  background: #e04834;
 }
 
 ul {
@@ -64,6 +63,7 @@ a{
 
 #button {
   padding: 0px 50px;
+  width: 200px;
   background: #e04834;
 }
 
