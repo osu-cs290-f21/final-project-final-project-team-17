@@ -48,8 +48,8 @@ function handleModalAcceptClick() {      //not working
     alert("You must fill in all of the fields!");
   } else {
 
+    //this code is what is cited by the browser as not working when we try to make a new recipe
     var req = new XMLHttpRequest()
-    // http://localhost:8000/people/rey
     var url = '/recipe/2'
     console.log("== url:", url)
     req.open('POST', url)
