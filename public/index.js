@@ -18,16 +18,6 @@ function insertNewRecipe(name, cooktime, imageURL){
 
 var allRecipes = [];
 
-function openCreating(){
-  location.href = location.href + "creating"
-  console.log(window.location.href)
-}
-
-var creatingBotton = document.getElementById("create-recipe-button")
-if(creatingBotton){
-  creatingBotton.addEventListener("click", openCreating)
-}
-
 function backToMainPage(){
   location.href = "http://localhost:3000/"      //how to not hard code this
 }

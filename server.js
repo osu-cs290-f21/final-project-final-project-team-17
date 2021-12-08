@@ -23,7 +23,7 @@ app.get('/recipes/:recipeArr', function(req, res, next){
     var recipeArr = req.params.recipeArr;
     console.log('-- recipeArr: ', recipeArr)
     if(recipeData[recipeArr]){
-        res.status(200).render('partials/newRecipe', recipeData[recipeArr])
+        res.status(200).render('recipePage', recipeData[recipeArr])
     }
     else{
         next();
