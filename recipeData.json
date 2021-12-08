@@ -1,13 +1,8 @@
 [
-{
-    "name": "Borscht",
-    "cooktime": 70,
-    "photoURL": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F08%2F26232722%2F3747653.jpg&q=85"
-}
-
-
-
-
-
+  {
+      "name": "Borscht",
+      "cooktime": 70,
+      "photoURL": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F08%2F26232722%2F3747653.jpg&q=85"
+  }
 
 ]

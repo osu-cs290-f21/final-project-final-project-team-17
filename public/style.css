@@ -69,3 +69,8 @@ a:hover {
   background-color: green;
   border-left: 6px solid yellow
 }
+
+.recipes {
+  display: flex;
+  border: 3px;
+}
