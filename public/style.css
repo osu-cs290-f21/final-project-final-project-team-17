@@ -1,18 +1,8 @@
 /*
 This is a basic plan for how the site should look, nothing is final until I can actually see the result
-
-Green Candidates:
-1. #003a03
-2. #003813
-3. #0e240a
-
-Brown Candidates:
-1. #291e00
-2. #3b2700
-
 */
 header{
-  background-image: linear-gradient(180deg, #2EA369 ,#B8F3DB);
+  background: #e04834;
   display: flex;
   align-items: center;
   position: relative;
@@ -21,14 +11,18 @@ header{
 #navBar {
   z-index: -1;
   position: inline-block;
-  padding: 1em;
+  padding: 0px 0px 10px 0px;
   width: 100%;
-  background: #B8F3DB;
+  background: #e04834;
   color: white;
   height: 30px;
   margin: 0;
   font-size: 20px;
-  font-weight:bold;
+  font-weight: bold;
+}
+
+#buttonSpace {
+  display: flex;
 }
 
 ul {
@@ -41,7 +35,7 @@ ul {
 
 li a {
   display: inline;
-  color: white;
+  color: rgb(255, 228, 228);
   text-align: center;
   padding: 16px;
   text-decoration: none;
@@ -50,7 +44,6 @@ li a {
 li a:hover {
   border: 2px solid gray
 }
-
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -62,16 +55,20 @@ a{
     color: white;
 }
 
-
 .site-title {
-    font-family: 'Pinyon Script', cursive;
-    font-size: 80px;
-    margin: 0 0 0 20px;
-    padding-top: 20px;
+  font-family: 'gotham', sans-serif;
+  font-size: 80px;
+  margin: 0 0 0 40px;
+  padding-top: 20px;
+}
+
+#button {
+  padding: 0px 50px;
+  background: #e04834;
 }
 
 .content {
-    display: flex;
+  display: flex;
 }
 
 .recipe-input-element{
@@ -92,11 +89,13 @@ a{
   border: 1px solid #dadada;
   border-radius: 3px;
 }
+
 .recipes a{
   color: black;
   font-weight: bold;
   font-size: 20px;
 }
+
 .recipe-contents{
   display: flex;
   flex-direction: column;
@@ -104,6 +103,7 @@ a{
   height: 100%;
   width: 100%;
 }
+
 .recipe-image img{
   max-height: 240px;
   max-width: 300px;
