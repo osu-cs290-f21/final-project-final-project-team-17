@@ -33,6 +33,10 @@ app.get('/creating', function (req, res, next){
   res.status(200).render('creatingRecipe');
 })
 
+app.get('/about', function (req, res){
+    res.status(300).render('aboutus');
+  })
+
 app.get('*', function(req, res){
     res.status(404).render('404Page')
 })
