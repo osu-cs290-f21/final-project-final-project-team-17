@@ -71,12 +71,46 @@ a{
   display: flex;
 }
 
+.creatingRecipe-page {
+  padding: 20px;
+  background: white;
+}
+
+#creatingRecipe-modal {
+  border: 1px solid #dadada;
+  width: 25%;
+  padding-bottom: 10px;
+  background: whitesmoke;
+}
+
+.modal-dialog {
+
+}
+
+.modal-header {
+  font-family: 'gotham', sans-serif;
+  font-size: 20px;
+  display: flex;
+}
+
+.modal-hide-button {
+  height: 30%;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+#createTitle {
+  padding-left: 50px;
+}
+
 .recipe-input-element{
-  padding: 10px;
+  padding-top: 10px;
   margin: 30px;
-  border:  5px;
-  background-color: green;
-  border-left: 6px solid yellow
+  border: 5px;
+}
+/*Make accept and cancel buttons slightly larger, figure out text alignment so it is by percent instead of px*/
+#modal-accept {
+  text-align: right;
 }
 
 .recipe {

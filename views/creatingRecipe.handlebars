@@ -3,36 +3,37 @@
      <div class="modal-dialog">
 
        <div class="modal-header">
-         <h2>Creating new recipe</h2>
          <button type="button" id="modal-close" class="modal-hide-button">&times;</button>
+         
+         <h2 id = "createTitle">Creating New Recipe</h2>
        </div>
 
        <div class="modal-body">
 
          <div class="recipe-input-element">
-           <label for="recipe-name-input">Name</label>
+           <label for="recipe-name-input">Title</label>
            <input type="text" id="recipe-name-input"></input>
          </div>
 
          <div class="recipe-input-element">
-           <label for="recipe-photo-input">Photo URL</label>
+           <label for="recipe-photo-input">Image</label>
            <input type="text" id="recipe-photo-input">
          </div>
 
          <div class="recipe-input-element">
-           <label for="recipe-cooktime-input">Cooktime(min) </label>
+           <label for="recipe-cooktime-input">Cooktime</label>
            <input type="number" id="recipe-cooktime-input">
          </div>
 
          <div class="recipe-input-element">
-           <label for="recipe-steps-input">Steps</label>
+           <label for="recipe-steps-input">Instructions</label>
            <input type="text" id="recipe-steps-input">
          </div>
        </div>
 
        <div class="modal-footer">
          <button type="button" id="modal-cancel" class="modal-hide-button action-button">Cancel</button>
-         <button type="button" id="modal-accept" class="action-button">Sharing new recipe</button>
+         <button type="button" id="modal-accept" class="action-button">Create</button>
        </div>
 
      </div>
