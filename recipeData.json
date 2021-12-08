@@ -3,27 +3,27 @@
       "name": "Borscht",
       "cooktime": 70,
       "photoURL": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F08%2F26232722%2F3747653.jpg&q=85",
-      "instruction": "Borscht, also known as beetroot soup or Suber soup, is a thick vegetable soup originated in Ukraine."
+      "instructions": "Stew beets, beef chunks, onions, carrots, and whatever else you'd like in a pot for 70 minutes."
   },
 
   {
       "name": "Chicken Salad",
       "cooktime": 30,
       "photoURL": "https://healthyfitnessmeals.com/wp-content/uploads/2021/04/Southwest-chicken-salad-7.jpg",
-      "instruction": "Chicken salad is any salad with chicken as the main ingredient. Other common ingredients may include mayonnaise, boiled eggs, celery, onions, peppers, pickles and various mustards."
+      "instructions": "Chop up cooked chicken and whatever salad bits you'd like, and toss them in a bowl."
   },
 
   {
     "name": "Waffles",
     "cooktime": 25,
     "photoURL": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2020%2F03%2F34761.jpg",
-    "instruction": "A waffle is a dish made from leavened batter or dough that is cooked between two plates that are patterned to give a characteristic size, shape, and surface impression. "
+    "instructions": "Press pancake or waffle batter in a waffle iron until done, then top with whatever you please."
   },
   
   {
     "name": "Osso Buco",
     "cooktime": 180,
     "photoURL": "https://www.simplyrecipes.com/thmb/YOvR_V7EJTilPOUnlG9nk9fiJC4=/2000x1334/filters:fill(auto,1)/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2006__12__Osso-Buco-LEAD-5-a816159cbe9740a5b21f3c1e515f9da2.jpg",
-    "instruction": "Ossobuco or osso buco is a specialty of Lombard cuisine of cross-cut veal shanks braised with vegetables, white wine and broth."
+    "instructions": "Braise veal with vegetables, white wine, and broth."
   }
 ]
