@@ -83,10 +83,6 @@ a{
   background: whitesmoke;
 }
 
-.modal-dialog {
-
-}
-
 .modal-header {
   font-family: 'gotham', sans-serif;
   font-size: 20px;
@@ -146,4 +142,25 @@ a{
 .recipe-info{
   width: 100%;
   margin-top: 20px;
+}
+
+.about-page {
+  font-family: 'gotham', sans-serif;
+}
+
+.error-container {
+  font-family: 'gotham', sans-serif;
+  text-align: center;
+  color:red;
+}
+
+.error-container h2 {
+  font-size: 120px;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+.error-container h3 {
+  font-size: 50px;
+  margin: 0;
 }
