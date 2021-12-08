@@ -71,6 +71,29 @@ a:hover {
 }
 
 .recipes {
+  display: inline-block;
+  vertical-align: top;
+  height: 300px;
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #dadada;
+  border-radius: 3px;
+}
+
+.recipe-contents{
   display: flex;
-  border: 3px;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.recipe-image img{
+  max-height: 240px;
+  max-width: 300px;
+}
+
+.recipe-info{
+  width: 100%;
+  margin-top: 20px;
 }
