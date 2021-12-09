@@ -192,3 +192,8 @@ a{
   font-size: 50px;
   margin: 0;
 }
+
+#groupMembers {
+  padding-left: 20px;
+  font-weight: bold;
+}
