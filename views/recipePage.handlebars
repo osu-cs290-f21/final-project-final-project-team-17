@@ -1,15 +1,15 @@
 <main class = "recipe-page">
   <div class = "recipeName-container">
-      <h2>{{name}}</h2>
+      <h2 id = "recipeName">{{name}}</h2>
     </div>
 
 {{!UNFINISHED Things for the separate pages of each recipe }}
 <div class="recipe-page-image-container">
-  <img src={{photoURL}} alt={{name}}>
+  <img id = "imageScale" src={{photoURL}} alt={{name}}>
 </div>
 
 <div class="recipe-page-time-container">
-  {{cooktime}}
+  {{cooktime}} Minutes
 </div>
 
 <div class="recipe-page-instructions-container">

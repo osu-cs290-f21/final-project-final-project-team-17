@@ -76,6 +76,33 @@ a{
   background: white;
 }
 
+.recipeName-container {
+  padding-left: 50px;
+}
+
+#recipeName {
+  font-size: 30px;
+}
+
+.recipe-page-time-container {
+  padding-left: 30px;
+  text-decoration: underline;
+}
+
+.recipe-page-image-container {
+  padding-left: 20px;
+}
+
+#imageScale {
+  height: 25%;
+  width: 25%;
+}
+
+.recipe-page-instructions-container {
+  padding-left: 25px;
+  padding-top: 10px;
+}
+
 #creatingRecipe-modal {
   border: 1px solid #dadada;
   width: 25%;
