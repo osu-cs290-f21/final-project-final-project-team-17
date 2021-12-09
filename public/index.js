@@ -1,13 +1,13 @@
 /* function emulating insertNewPost from assignment 5; meant to insert new recipe
  into index html*/
 
-function insertNewRecipe(name, cooktime, imageURL,instruction){
+function insertNewRecipe(name, cooktime, imageURL,instructions){
 
     var newRecipeContent = {
         "name": name,
         "cooktime": cooktime,
         "imageURL": imageURL,
-        "instruction": instruction
+        "instructions": instructions
     }
 
     var newRecipeHTML = Handlebars.templates.newRecipe(newRecipeContent)
@@ -48,7 +48,6 @@ function handleModalAcceptClick() {      //not working
   if (!photoURLNew || !instructionsNew ||!nameNew ||! cooktimeNew) {
     alert("You must fill in all of the fields!");
   } else {
-
     //this code is what is cited by the browser as not working when we try to make a new recipe
     var req = new XMLHttpRequest()
     var url = '/recipe/2'
@@ -72,10 +71,11 @@ function handleModalAcceptClick() {      //not working
         alert("Error saving recipe: " + event.target.response)
       }
     })
-
     req.setRequestHeader('Content-Type', 'application/json')
     req.send(reqBody)
     console.log(reqBody)
+    
+    
 
   }
 
