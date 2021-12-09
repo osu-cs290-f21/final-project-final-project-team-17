@@ -146,6 +146,7 @@ a{
 
 .about-page {
   font-family: 'gotham', sans-serif;
+  margin-left: 15px;
 }
 
 .error-container {
