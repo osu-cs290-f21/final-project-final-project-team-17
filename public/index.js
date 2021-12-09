@@ -1,6 +1,7 @@
 /* function emulating insertNewPost from assignment 5; meant to insert new recipe
  into index html*/
 
+ 
 function insertNewRecipe(name, cooktime, imageURL,instructions){
 
     var newRecipeContent = {
@@ -15,9 +16,6 @@ function insertNewRecipe(name, cooktime, imageURL,instructions){
     var recipeContainer = document.getElementsByClassName('recipes')
     recipeContainer.insertAdjacentHTML('beforeend', newRecipeHTML)
 }
-
-
-var allRecipes = [];
 
 function backToMainPage(){
   location.href = "http://localhost:3000/"      //how to not hard code this
@@ -50,13 +48,14 @@ function handleModalAcceptClick() {      //not working
   } else {
     //this code is what is cited by the browser as not working when we try to make a new recipe
     var req = new XMLHttpRequest()
-    var url = '/recipe/2'
+    var url = '/recipe/2' //we know that this is wrong for a matter of fact
     console.log("== url:", url)
     req.open('POST', url)
     var recipeObj = {
       name: nameNew,
       cooktime: cooktimeNew,
-      photoURL: photoURLNew
+      photoURL: photoURLNew,
+      instructions: instructionsNew
     }
     var reqBody = JSON.stringify(recipeObj)
     console.log("== reqBody:", reqBody)
@@ -74,8 +73,7 @@ function handleModalAcceptClick() {      //not working
     req.setRequestHeader('Content-Type', 'application/json')
     req.send(reqBody)
     console.log(reqBody)
-    
-    
+   
 
   }
 
