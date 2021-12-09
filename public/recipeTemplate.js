@@ -22,6 +22,6 @@ templates['newRecipe'] = template({"compiler":[8,">= 4.3.0"],"main":function(con
     + alias4(((helper = (helper = lookupProperty(helpers,"name") || (depth0 != null ? lookupProperty(depth0,"name") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data,"loc":{"start":{"line":7,"column":88},"end":{"line":7,"column":96}}}) : helper)))
     + "</a>\r\n            <br><span class=\"recipe-time\">Cooktime: "
     + alias4(((helper = (helper = lookupProperty(helpers,"cooktime") || (depth0 != null ? lookupProperty(depth0,"cooktime") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"cooktime","hash":{},"data":data,"loc":{"start":{"line":8,"column":52},"end":{"line":8,"column":64}}}) : helper)))
-    + " mins</span>\r\n        </div>\r\n    </div>\r\n\r\n</div>\r\n";
+    + " minutes</span>\r\n        </div>\r\n    </div>\r\n\r\n</div>\r\n";
 },"useData":true});
 })();
