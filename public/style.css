@@ -93,6 +93,7 @@ a{
 .recipe-page-time-container {
   padding-left: 30px;
   text-decoration: underline;
+  font-weight: bold;
 }
 
 .recipe-page-image-container {
