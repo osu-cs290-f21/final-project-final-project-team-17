@@ -1,0 +1,56 @@
+<button type="button" id="sell-something-button"><i>Post Food</i></button>
+<div id="modal-backdrop" class="hidden"></div>
+<div id="sell-something-modal" class="hidden">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <h3>Post Recipe Food</h3>
+      <button type="button" id="modal-close" class="modal-hide-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="post-input-element">
+        <label for="post-text-input">Food name</label>
+        <input type="text" id="post-text-input"></input>
+      </div>
+      <div class="post-input-element">
+        <label for="post-photo-input">Food URL</label>
+        <input type="text" id="post-photo-input">
+      </div>
+      <div class="post-input-element">
+        <label for="post-price-input">Cooktime</label>
+        <input type="number" id="post-price-input">
+      </div>
+      <div class="post-input-element">
+        <label for="post-city-input">Country</label>
+        <input type="text" id="post-city-input">
+      </div>
+      <div class="post-input-element">
+        <fieldset id="post-condition-fieldset" class="post-fieldset">
+          <legend>Food time</legend>
+          <div>
+            <input type="radio" name="post-condition" id="post-condition-new" value="new" checked>
+            <label for="post-condition-new">breakfast</label>
+          </div>
+          <div>
+            <input type="radio" name="post-condition" id="post-condition-excellent" value="excellent">
+            <label for="post-condition-excellent">Lunch</label>
+          </div>
+          <div>
+            <input type="radio" name="post-condition" id="post-condition-good" value="good">
+            <label for="post-condition-good">dinner</label>
+          </div>
+          <div>
+            <input type="radio" name="post-condition" id="post-condition-fair" value="fair">
+            <label for="post-condition-fair">fast food</label>
+          </div>
+          <div>
+            <input type="radio" name="post-condition" id="post-condition-poor" value="poor">
+            <label for="post-condition-poor">snack</label>
+          </div>
+        </fieldset>
+      </div>
+    <div class="modal-footer">
+      <button type="button" id="modal-cancel" class="modal-hide-button action-button">Cancel</button>
+      <button type="button" id="modal-accept" class="action-button">Post Food</button>
+    </div>
+  </div>
+</div>
