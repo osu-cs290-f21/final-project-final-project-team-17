@@ -1,350 +1,86 @@
-/*
- * Write your client-side JS code in this file.  Make sure to add your name and
- * @oregonstate.edu email address below.
- *
- * Name:Yuhang Zhang
- * Email: zhanyuh2@oregonstate.edu
- */
+/* function emulating insertNewPost from assignment 5; meant to insert new recipe
+ into index html*/
 
-function insertNewPost(description, photoURL, price, city, condition) {
-  var postContext = {
-      description: description,
-      photoURL: photoURL,
-      price: price,
-      city: city,
-      condition: condition
-  };
-  var postHTML = Handlebars.templates.post(postContext);
-  var postContainer = document.getElementById('posts');
-  postContainer.insertAdjacentHTML('beforeend', postHTML);
-  console.log("== post added via insertNewPost.");
+ 
+function insertNewRecipe(name, cooktime, imageURL,instructions){
+
+    var newRecipeContent = {
+        "name": name,
+        "cooktime": cooktime,
+        "imageURL": imageURL,
+        "instructions": instructions
+    }
+
+    var newRecipeHTML = Handlebars.templates.newRecipe(newRecipeContent)
+
+    var recipeContainer = document.getElementsByClassName('recipes')
+    recipeContainer.insertAdjacentHTML('beforeend', newRecipeHTML)
 }
-/***************************************************************************
- **
- ** You should not modify any of the functions below.
- **
- ***************************************************************************/
 
-/*
- * These arrays hold the collection of all post objects and the list of all
- * cities that have been used in posts.
- */
-var allPosts = [];
-var allCities = [];
+function backToMainPage(){
+  location.href = "http://localhost:3000/"      //how to not hard code this
+}
 
-/*
- * This function checks whether all of the required inputs were supplied by
- * the user and, if so,i nserting a new post into the page constructed using
- * these inputs.  If the user did not supply a required input, they instead
- * recieve an alert, and no new post is inserted.
- */
-function handleModalAcceptClick() {
+var cancelInputButton = document.getElementById("modal-cancel")
+if(cancelInputButton){
+  cancelInputButton.addEventListener("click", backToMainPage)
+}
 
-  var description = document.getElementById('post-text-input').value.trim();
-  var photoURL = document.getElementById('post-photo-input').value.trim();
-  var price = document.getElementById('post-price-input').value.trim();
-  var city = document.getElementById('post-city-input').value.trim();
-  var condition = document.querySelector('#post-condition-fieldset input:checked').value;
+var closeInputButton = document.getElementById("modal-close")
+if(closeInputButton){
+  closeInputButton.addEventListener("click", backToMainPage)
+}
 
-  if (!description || !photoURL || !price || !city || !condition) {
+var headerClick = document.getElementById("headTitle")
+if(headerClick){
+  headerClick.addEventListener("click", backToMainPage)
+}
+
+function handleModalAcceptClick() {      //not working
+
+  var photoURLNew = document.getElementById('recipe-photo-input').value.trim();
+  var instructionsNew = document.getElementById('recipe-instructions-input').value.trim();
+  var nameNew = document.getElementById('recipe-name-input').value;
+  var cooktimeNew = document.getElementById('recipe-cooktime-input').value;
+
+  if (!photoURLNew || !instructionsNew ||!nameNew ||! cooktimeNew) {
     alert("You must fill in all of the fields!");
   } else {
-
-    allPosts.push({
-      description: description,
-      photoURL: photoURL,
-      price: price,
-      city: city,
-      condition: condition
-    });
-
-    clearFiltersAndReinsertPosts();
-
-    addCityToAllCities(city);
-
-    hideSellSomethingModal();
-
-  }
-
-}
-
-
-/*
- * This function clears all filter values, causing all posts to be re-inserted
- * into the DOM.
- */
-function clearFiltersAndReinsertPosts() {
-
-  document.getElementById('filter-text').value = "";
-  document.getElementById('filter-min-price').value = "";
-  document.getElementById('filter-max-price').value = "";
-  document.getElementById('filter-city').value = "";
-
-  var filterConditionCheckedInputs = document.querySelectorAll("#filter-condition input");
-  for (var i = 0; i < filterConditionCheckedInputs.length; i++) {
-    filterConditionCheckedInputs[i].checked = false;
-  }
-
-  doFilterUpdate();
-
-}
-
-
-/*
- * This function checks to see if a city is included in the collection of all
- * cities for which we have a post.  If it's not, the new city is added to the
- * collection.
- */
-function addCityToAllCities(city) {
-
-  /*
-   * If city doesn't already exist in the list of cities by which we can
-   * filter, add it.
-   */
-  if (allCities.indexOf(city.toLowerCase()) === -1) {
-    allCities.push(city.toLowerCase());
-    var newCityOption = createCityOption(city);
-    var filterCitySelect = document.getElementById('filter-city');
-    filterCitySelect.appendChild(newCityOption);
-  }
-
-}
-
-
-/*
- * This function shows the "sell something" modal by removing the "hidden"
- * class from the modal and backdrop.
- */
-function showSellSomethingModal() {
-
-  var showSomethingModal = document.getElementById('sell-something-modal');
-  var modalBackdrop = document.getElementById('modal-backdrop');
-
-  showSomethingModal.classList.remove('hidden');
-  modalBackdrop.classList.remove('hidden');
-
-}
-
-
-/*
- * This function clears any user-entered inputs in the "sell something" modal.
- */
-function clearSellSomethingModalInputs() {
-
-  var postTextInputElements = [
-    document.getElementById('post-text-input'),
-    document.getElementById('post-photo-input'),
-    document.getElementById('post-price-input'),
-    document.getElementById('post-city-input')
-  ];
-
-  /*
-   * Clear any text entered in the text inputs.
-   */
-  postTextInputElements.forEach(function (inputElem) {
-    inputElem.value = '';
-  });
-
-  /*
-   * Grab the originally checked radio button and make sure it's checked.
-   */
-  var checkedPostConditionButton = document.querySelector('#post-condition-fieldset input[checked]');
-  checkedPostConditionButton.checked = true;
-
-}
-
-
-/*
- * This function hides the "sell something" modal by adding the "hidden"
- * class from the modal and backdrop.  It also clears any existing inputs in
- * the modal's input fields when the modal is hidden.
- */
-function hideSellSomethingModal() {
-
-  var showSomethingModal = document.getElementById('sell-something-modal');
-  var modalBackdrop = document.getElementById('modal-backdrop');
-
-  showSomethingModal.classList.add('hidden');
-  modalBackdrop.classList.add('hidden');
-
-  clearSellSomethingModalInputs();
-
-}
-
-
-/*
- * This function creates a new <option> element containing a given city name.
- */
-function createCityOption(city) {
-  var newCityOption = document.createElement('option');
-  newCityOption.textContent = city;
-  return newCityOption;
-}
-
-
-/*
- * A function to apply the current filters to a specific post.  Returns true
- * if the post passes the filters and should be displayed and false otherwise.
- */
-function postPassesFilters(post, filters) {
-
-  if (filters.text) {
-    var postDescription = post.description.toLowerCase();
-    var filterText = filters.text.toLowerCase();
-    if (postDescription.indexOf(filterText) === -1) {
-      return false;
+    //this code is what is cited by the browser as not working when we try to make a new recipe
+    var req = new XMLHttpRequest()
+    var url = '/recipe/2' //we know that this is wrong for a matter of fact
+    console.log("== url:", url)
+    req.open('POST', url)
+    
+    var recipeObj = {
+      name: nameNew,
+      cooktime: cooktimeNew,
+      photoURL: photoURLNew,
+      instructions: instructionsNew
     }
-  }
+    var reqBody = JSON.stringify(recipeObj)
+    console.log("== reqBody:", reqBody)
 
-  if (filters.minPrice) {
-    var filterMinPrice = Number(filters.minPrice);
-    if (Number(post.price) < filterMinPrice) {
-      return false;
-    }
-  }
+    req.addEventListener('load', function (event) {
+      if (event.target.status === 200) {
+        var recipesTemplate = Handlebars.templates.newRecipe;
+        var newRecipeHTML = recipesTemplate(recipeObj);
+        var recipeContainer = document.querySelector('.recipes');
+        recipeContainer.insertAdjacentHTML('beforeend', newRecipeHTML);
+      } else {
+        alert("Error saving recipe: " + event.target.response)
+      }
+    })
+    req.setRequestHeader('Content-Type', 'application/json')
+    req.send(reqBody)
+    console.log(reqBody)
+   
 
-  if (filters.maxPrice) {
-    var filterMaxPrice = Number(filters.maxPrice);
-    if (Number(post.price) > filterMaxPrice) {
-      return false;
-    }
   }
-
-  if (filters.city) {
-    if (post.city.toLowerCase() !== filters.city.toLowerCase()) {
-      return false;
-    }
-  }
-
-  if (filters.conditions && filters.conditions.length > 0) {
-    if (filters.conditions.indexOf(post.condition) === -1) {
-      return false;
-    }
-  }
-
-  return true;
 
 }
 
-
-/*
- * Applies the filters currently entered by the user to the set of all posts.
- * Any post that satisfies the user's filter values will be displayed,
- * including posts that are not currently being displayed because they didn't
- * satisfy an old set of filters.  Posts that don't satisfy the filters are
- * removed from the DOM.
- */
-function doFilterUpdate() {
-
-  /*
-   * Grab values of filters from user inputs.
-   */
-  var filters = {
-    text: document.getElementById('filter-text').value.trim(),
-    minPrice: document.getElementById('filter-min-price').value,
-    maxPrice: document.getElementById('filter-max-price').value,
-    city: document.getElementById('filter-city').value.trim(),
-    conditions: []
-  }
-
-  var filterConditionCheckedInputs = document.querySelectorAll("#filter-condition input:checked");
-  for (var i = 0; i < filterConditionCheckedInputs.length; i++) {
-    filters.conditions.push(filterConditionCheckedInputs[i].value);
-  }
-
-  /*
-   * Remove all "post" elements from the DOM.
-   */
-  var postContainer = document.getElementById('posts');
-  while(postContainer.lastChild) {
-    postContainer.removeChild(postContainer.lastChild);
-  }
-
-  /*
-   * Loop through the collection of all "post" elements and re-insert ones
-   * that meet the current filtering criteria.
-   */
-  allPosts.forEach(function (post) {
-    if (postPassesFilters(post, filters)) {
-      insertNewPost(post.description, post.photoURL, post.price, post.city, post.condition);
-    }
-  });
-
-}
-
-
-/*
- * This function parses an existing DOM element representing a single post
- * into an object representing that post and returns that object.  The object
- * is structured like this:
- *
- * {
- *   description: "...",
- *   photoURL: "...",
- *   price: ...,
- *   city: "...",
- *   condition: "..."
- * }
- */
-function parsePostElem(postElem) {
-
-  var post = {
-    price: postElem.getAttribute('data-price'),
-    city: postElem.getAttribute('data-city'),
-    condition: postElem.getAttribute('data-condition')
-  };
-
-  var postImageElem = postElem.querySelector('.post-image-container img');
-  post.photoURL = postImageElem.src;
-  post.description = postImageElem.alt;
-
-  return post;
-
-}
-
-
-/*
- * Wait until the DOM content is loaded, and then hook up UI interactions, etc.
- */
-window.addEventListener('DOMContentLoaded', function () {
-
-  /*
-   * Remember all of the initial post elements initially displayed in the page.
-   */
-  var postElems = document.getElementsByClassName('post');
-  for (var i = 0; i < postElems.length; i++) {
-    allPosts.push(parsePostElem(postElems[i]));
-  }
-
-  /*
-   * Grab all of the city names already in the filter dropdown.
-   */
-  var filterCitySelect = document.getElementById('filter-city');
-  if (filterCitySelect) {
-    var filterCityOptions = filterCitySelect.querySelectorAll('option:not([selected])');
-    for (var i = 0; i < filterCityOptions.length; i++) {
-      allCities.push(filterCityOptions[i].value.trim().toLowerCase());
-    }
-  }
-
-  var sellSomethingButton = document.getElementById('sell-something-button');
-  if (sellSomethingButton) {
-    sellSomethingButton.addEventListener('click', showSellSomethingModal);
-  }
-
-  var modalAcceptButton = document.getElementById('modal-accept');
-  if (modalAcceptButton) {
-    modalAcceptButton.addEventListener('click', handleModalAcceptClick);
-  }
-
-  var modalHideButtons = document.getElementsByClassName('modal-hide-button');
-  for (var i = 0; i < modalHideButtons.length; i++) {
-    modalHideButtons[i].addEventListener('click', hideSellSomethingModal);
-  }
-
-  var filterUpdateButton = document.getElementById('filter-update-button');
-  if (filterUpdateButton) {
-    filterUpdateButton.addEventListener('click', doFilterUpdate)
-  }
-
-});
+var addrecipeButtons = document.getElementById('modal-accept')
+console.log(addrecipeButtons)
+addrecipeButtons.addEventListener('click', handleModalAcceptClick)
+//complete the rest later

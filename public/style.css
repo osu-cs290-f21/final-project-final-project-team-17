@@ -1,125 +1,190 @@
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-header {
-  background-color: #e04834;
+/*
+This is a basic plan for how the site should look, nothing is final until I can actually see the result
+*/
+header{
+  background: #e04834;
   display: flex;
   align-items: center;
   position: relative;
 }
 
-header a {
-  color: black;
+#navBar {
+  position: inline-block;
+  padding: 10px 0px 10px 0px;
+  width: 225px;
+  background: #e04834;
+  height: 30px;
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.sub-title {
-  font-size: 30px;
+#buttonSpace {
+  display: flex;
+  background: #e04834;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #B8F3DB;
+}
+
+li a {
+  display: inline;
+  color: rgb(255, 228, 228);
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  border: 2px solid gray
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: white;
 }
 
 .site-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'gotham', sans-serif;
   font-size: 80px;
-  font-weight: 100;
-  margin: 0 0 0 20px;
-  padding-top: 30px;
+  margin: 0 0 0 40px;
+  padding-top: 20px;
 }
 
-.site-title h1 {
-  margin: 0 auto;
-}
-
-.site-title a:hover {
-  text-decoration: none;
+#button {
+  padding: 0px 50px;
+  width: 200px;
+  background: #e04834;
 }
 
 .content {
   display: flex;
 }
 
-.filter-container {
-  display: inline-block;
-  min-width: 200px;
-  max-width: 200px;
-  margin: 10px 10px auto 10px;
+.creatingRecipe-page {
   padding: 20px;
-  border-radius: 3px;
-  background-color: #c26b68;
+  background: white;
 }
 
-.filter-container h2 {
-  margin: 0;
-}
-
-.filter-input-container {
-  width: 100%;
-  margin: 20px 0;
+#recipeFlex {
   display: flex;
-  align-items: center;
-}
-
-.filter-input-element {
-  margin: 0 5px;
-  flex: 1 1 100%;
-}
-
-.filter-input {
-  font-size: 14px;
   width: 100%;
-  margin-left: 10px;
-  padding: 3px;
+  height: 100%;
+}
+
+.recipeName-container {
+  padding-left: 50px;
+}
+
+#recipeName {
+  font-size: 30px;
+}
+
+.recipe-page-time-container {
+  padding-left: 30px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.recipe-page-image-container {
+  padding-left: 20px;
+  width: 25%;
+  height: 25%;
+}
+
+#imageScale {
+  height: 100%;
+  width: 100%;
+}
+
+.recipe-page-instructions-container {
+  padding-left: 25px;
+  padding-top: 10px;
+}
+
+#creatingRecipe-modal {
   border: 1px solid #dadada;
-  border-radius: 3px;
+  width: 470px;
+  padding-bottom: 10px;
+  background: whitesmoke;
 }
 
-.filter-fieldset {
-  flex: 1 100%;
-  border: 1px solid #ababab;
-}
-
-.action-button {
+.modal-header {
+  font-family: 'gotham', sans-serif;
   font-size: 20px;
-  color: white;
-  padding: 10px;
-  background-color: #000;
-  border: 1px solid #ababab;
-  border-radius: 5px;
-  font-weight: lighter;
-  cursor: pointer;
+  display: flex;
 }
 
-.action-button:hover {
-  background-color: #000000;
-  border-color: #333;
-  color: #333;
+.modal-hide-button {
+  height: 30%;
+  margin-top: 15px;
+  margin-left: 15px;
 }
 
-#filter-update-button {
-  width: 100%;
+.modal-body {
+  margin-top: -30px;
+  padding-bottom: 30px;
 }
 
-.post {
+#recipe-instructions-input {
+  height: 200px;
+  width: 400px;
+  resize: none;
+  padding-top: 10px;
+}
+
+#createTitle {
+  margin-left: 40px;
+}
+
+.recipe-input-element{
+  padding-top: 10px;
+  margin: 30px;
+  border: 5px;
+}
+
+.modal-footer {
+  text-align: right;
+  padding-right: 30px;
+}
+
+#modal-cancel {
+  padding: 5px;
+  margin-right: 20px;
+}
+
+#modal-accept {
+  padding: 5px;
+}
+
+.recipe {
   display: inline-block;
   vertical-align: top;
-  height: 300px;
-  width: 300px;
+  height: 350px;
+  width: 350px;
   margin: 10px;
   padding: 10px;
   border: 1px solid #dadada;
   border-radius: 3px;
 }
 
-.post-contents {
+.recipes a{
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.recipe-contents{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -127,174 +192,22 @@ header a {
   width: 100%;
 }
 
-.post-image-container img {
+.recipe-image img{
   max-height: 240px;
   max-width: 300px;
 }
 
-.post-info-container {
+.recipe-info{
   width: 100%;
   margin-top: 20px;
 }
 
-.post-price {
-  display: inline-block;
-  font-size: 80%;
-  padding: 3px;
-  margin: 3px 5px;
-  border: 1px solid #ababab;
-  border-radius: 3px;
-  background: #efefef;
+.about-page {
+  font-family: 'gotham', sans-serif;
+  margin-left: 15px;
 }
 
-#sell-something-button a {
-  font-size: 20px;
-  color: rgb(0, 0, 0);
-  font-family: 'Montserrat', sans-serif;
-}
-
-#sell-something-button {
-  position: absolute;
-  right: 50px;
-  bottom: 30px;
-  height: 100px;
-  width: 90px;
-  border-radius: 10px;
-  top: 30px;
-  border: none;
-  font-size: 15px;
-  background-color: #ff0101;
-  cursor: pointer;
-}
-
-#sell-something-button:hover,
-#sell-something-button:focus {
-  right: 50px;
-  bottom: 30px;
-  height: 100px;
-  border-radius: 10px;
-  width: 99px;
-  font-size: 15px;
-}
-
-#sell-something-button:focus {
-  outline: none;
-}
-
-/*
- * Modal stuff
- */
-
-#modal-backdrop {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  background-color: rgba(31, 27, 27, 0.85);
-}
-
-#sell-something-modal {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1010;
-  overflow: scroll;
-}
-
-.hidden {
-  display: none;
-}
-
-.modal-dialog {
-  width: auto;
-  max-width: 600px;
-  min-width: 350px;
-  min-height: 300px;
-  margin: 40px auto;
-  background-color: #fff;
-  border-radius: 15px;
-}
-
-.modal-header {
-  position: relative;
-  padding: 10px 20px;
-}
-
-.modal-header h3 {
-  margin: 0;
-  font-size: 28px;
-}
-
-#modal-close {
-  position: absolute;
-  right: 10px;
-  top: 5px;
-  font-size: 24px;
-  border: none;
-  background: none;
-  padding: 0;
-  cursor: pointer;
-}
-
-.modal-body {
-  padding: 20px;
-}
-
-.post-input-element {
-  display: flex;
-  align-items: center;
-  font-size: 20px;
-  margin: 10px 0;
-}
-
-.post-input-element > label {
-  font-weight: 600;
-  flex: 1 75px;
-  margin-right: 10px;
-}
-
-.post-input-element input {
-  flex: 6 200px;
-  padding: 8px;
-  font-size: 20px;
-  border: 1px solid rgb(0, 0, 0);
-}
-
-.post-fieldset {
-  flex: 1 100%;
-  border: 1px solid #000000;
-}
-
-.modal-footer {
-  display: flex;
-  justify-content: flex-end;
-  padding: 10px 10px 20px 10px;
-}
-
-#modal-cancel,
-#modal-accept {
-  margin-right: 20px;
-}
-
-#modal-cancel {
-  color: rgb(255, 255, 255);
-  background-color: rgb(0, 0, 0);
-}
-
-#modal-cancel:hover {
-  background-color: rgb(0, 0, 0);
-  color:#333;
-}
-
-/*
- * 404 page stuff
- */
-
- .error-container {
+.error-container {
   font-family: 'gotham', sans-serif;
   text-align: center;
   color:red;
@@ -309,4 +222,9 @@ header a {
 .error-container h3 {
   font-size: 50px;
   margin: 0;
+}
+
+#groupMembers {
+  padding-left: 20px;
+  font-weight: bold;
 }

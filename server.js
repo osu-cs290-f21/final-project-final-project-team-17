@@ -1,36 +1,46 @@
-/*
- * Write your routing code in this file.  Make sure to add your name and
- * @oregonstate.edu email address below.
- *
- * Name:Yuhang Zhang
- * Email: zhanyuh2@oregonstate.edu
- */
-var path = require('path');
-var express = require('express');
-var exphbs = require('express-handlebars');
-var app = express();
+var path = require('path')
+var express = require('express')
+var exphbs = require('express-handlebars')
+var recipeData = require('./recipeData.json')
+var app = express()
 var port = process.env.PORT || 3000;
-var postData = require('./postData');
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
-app.set('view engine', 'handlebars');
-app.use(express.static('public'));
-app.get('/', function (req, res, next) {
-    console.log("== client requesting '/'");
-    res.status(200).render('postPage', postData);
-});
-app.get('/posts/:n', function (req, res, next) {
-    var index = req.params.n;
-    console.log("== client requesting '/posts/" + index + "'");
-    if (index >= 0 && index <= 7) { res.status(200).render('partials/post', postData[index]); }
-    else { next(); }
-});
+
+app.engine('handlebars', exphbs.engine({defaultLayout: 'main'}))
+app.set('view engine', 'handlebars')
+
+app.use(express.static('public'))
+
+app.get('/', function(req, res, next){
+    res.status(200).render('indexPage', {
+        indexPage: true,
+        recipeData
+    })
+    console.log("passed the / render")
+    console.log ("data", recipeData)
+})
+
+app.get('/recipes/:recipeArr', function(req, res, next){
+    var recipeArr = req.params.recipeArr;
+    console.log('-- recipeArr: ', recipeArr)
+    if(recipeData[recipeArr]){
+        res.status(200).render('recipePage', recipeData[recipeArr])
+    }
+    else{
+        next();
+    }
+})
+app.get('/creating', function (req, res, next){
+  res.status(200).render('creatingRecipe');
+})
+
 app.get('/about', function (req, res){
     res.status(200).render('aboutus');
   })
-app.get('*', function (req, res) {
-  console.log("== client requesting non-existing directory.");
-  res.status(404).render('404');
-});
+
+app.get('*', function(req, res){
+    res.status(404).render('404Page')
+})
+
 app.listen(port, function () {
-  console.log("== Server is listening on port", port);
-});
+    console.log("== Server is listening on port: ", port);
+  });
