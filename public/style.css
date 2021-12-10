@@ -84,6 +84,7 @@ a{
 
 #recipeButton:hover {
   border: 1px solid grey;
+  cursor: pointer;
 }
 
 .content {
@@ -135,12 +136,30 @@ a{
   padding-top: 10px;
 }
 
+#modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.85);
+  height: 1920px;
+}
+
 #creatingRecipe-modal {
-  border: 1px solid #dadada;
   width: 470px;
+  height: 650px;
   padding-bottom: 10px;
   background: whitesmoke;
-  z-index: 100;
+  z-index: 1010;
+  position: fixed;
+  margin-left: 40%;
+  margin-top: 7%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .modal-header {

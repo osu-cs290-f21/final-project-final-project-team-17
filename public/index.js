@@ -22,16 +22,16 @@ function backToMainPage(){
 }
 
 function openModal() {
-  var showNewRecipeModal = document.getElementById('modal-dialog')
-  var modalBackground = document.getElementById('creatingRecipe-modal')
+  var modalBackground = document.getElementById('modalBackdrop')
+  var showNewRecipeModal = document.getElementById('creatingRecipe-modal')
 
   showNewRecipeModal.classList.remove('hide')
   modalBackground.classList.remove('hide')
 }
 
 function closeModal() {
-  var showNewRecipeModal = document.getElementById('modal-dialog')
-  var modalBackground = document.getElementById('creatingRecipe-modal')
+  var modalBackground = document.getElementById('modalBackdrop')
+  var showNewRecipeModal = document.getElementById('creatingRecipe-modal')
 
   showNewRecipeModal.classList.add('hide')
   modalBackground.classList.add('hide')
