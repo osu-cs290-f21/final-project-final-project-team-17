@@ -19,11 +19,17 @@
     "photoURL": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2020%2F03%2F34761.jpg",
     "instructions": "Press pancake or waffle batter in a waffle iron until done, then top with whatever you please."
   },
-  
+
   {
     "name": "Osso Buco",
     "cooktime": 180,
     "photoURL": "https://www.simplyrecipes.com/thmb/YOvR_V7EJTilPOUnlG9nk9fiJC4=/2000x1334/filters:fill(auto,1)/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2006__12__Osso-Buco-LEAD-5-a816159cbe9740a5b21f3c1e515f9da2.jpg",
     "instructions": "Braise veal with vegetables, white wine, and broth."
+  },
+  {
+    "name": "Fried Rice",
+    "cooktime": 20,
+    "photoURL": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-fried-rice-009-1543877224.jpg?crop=1xw:1xh;center,top&resize=768:*",
+    "instructions": "3 tbsp. sesame oil, divided 3 large eggs Kosher salt2 carrots, diced 3 green onions, thinly sliced, white and green parts divided3 cloves garlic, minced1 tbsp. peeled and minced ginger (from a 1' piece) 4 c. cooked long grain rice (preferably leftover) 3/4 c. frozen peas 3 tbsp. low-sodium soy sauce "
   }
 ]

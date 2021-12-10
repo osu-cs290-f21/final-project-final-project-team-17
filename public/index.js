@@ -14,18 +14,17 @@
      recipeContainer.insertAdjacentHTML('beforeend', newRecipeHTML)
  }
  var allrecipe = []
- function handleModalAcceptClick() {      //not working
+
+ function handleModalAcceptClick() {
 
    var photoURLNew = document.getElementById('recipe-photo-input').value;
    var instructionsNew = document.getElementById('recipe-instructions-input').value;
    var nameNew = document.getElementById('recipe-name-input').value;
    var cooktimeNew = document.getElementById('recipe-cooktime-input').value;
 
-   if (!photoURLNew || !instructionsNew || !nameNew || !cooktimeNew) {
-     alert("You must fill in all of the fields!");
+   if (!photoURLNew||!instructionsNew ||!nameNew ||!cooktimeNew) {
+     alert("All of the fields have to be filled in");
    } else {
-     //this code is what is cited by the browser as not working when we try to make a new recip
-
      allrecipe.push ({
        name: nameNew,
        cooktime: cooktimeNew,
@@ -36,6 +35,8 @@
      allrecipe.forEach(function (recipe){
       insertNewRecipe(recipe.name, recipe.photoURL, recipe.cooktime, recipe.instructions)
     })
+    closeModal();
+    clearModalInput()
    }
  }
 function backToMainPage(){
@@ -79,9 +80,9 @@ if(closeInputButton){
   closeInputButton.addEventListener("click", closeModal)
 }
 
-var closeInputButton = document.getElementById("modal-cancel")
-if(closeInputButton){
-  closeInputButton.addEventListener("click", closeModal)
+var closeInputButton2 = document.getElementById("modal-cancel")
+if(closeInputButton2){
+  closeInputButton2.addEventListener("click", closeModal)
 }
 
 var headerClick = document.getElementById("headTitle")
