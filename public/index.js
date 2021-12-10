@@ -42,14 +42,29 @@ if(openInputModalButton) {
   openInputModalButton.addEventListener("click", openModal)
 }
 
+function clearModalInput() {
+  var modalTextInputs = [
+    document.getElementById('recipe-name-input'),
+    document.getElementById('recipe-photo-input'),
+    document.getElementById('recipe-cooktime-input'),
+    document.getElementById('recipe-instructions-input')
+  ]
+
+  modalTextInputs.forEach(function (inputElem) {
+    inputElem.value = '';
+  })
+}
+
 var closeInputButton = document.getElementById("modal-close")
 if(closeInputButton){
   closeInputButton.addEventListener("click", closeModal)
+  clearModalInput()
 }
 
 var closeInputButton = document.getElementById("modal-cancel")
 if(closeInputButton){
   closeInputButton.addEventListener("click", closeModal)
+  clearModalInput()
 }
 
 var headerClick = document.getElementById("headTitle")
