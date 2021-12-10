@@ -150,7 +150,7 @@ a{
   width: 470px;
   height: 650px;
   padding-bottom: 10px;
-  background: whitesmoke;
+  background: rgb(197, 197, 197);
   z-index: 1010;
   position: fixed;
   margin-left: 38%;
