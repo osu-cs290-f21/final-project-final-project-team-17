@@ -29,9 +29,6 @@ app.get('/recipes/:recipeArr', function(req, res, next){
         next();
     }
 })
-app.get('/creating', function (req, res, next){
-  res.status(200).render('creatingRecipe');
-})
 
 app.get('/about', function (req, res){
     res.status(200).render('aboutus');

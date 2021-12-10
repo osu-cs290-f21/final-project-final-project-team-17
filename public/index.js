@@ -22,11 +22,9 @@ function backToMainPage(){
 }
 
 function openModal() {
-  var modalBackground = document.getElementById('modalBackdrop')
   var showNewRecipeModal = document.getElementById('creatingRecipe-modal')
 
   showNewRecipeModal.classList.remove('hide')
-  modalBackground.classList.remove('hide')
 }
 
 function clearModalInput() {
@@ -43,11 +41,9 @@ function clearModalInput() {
 }
 
 function closeModal() {
-  var modalBackground = document.getElementById('modalBackdrop')
   var showNewRecipeModal = document.getElementById('creatingRecipe-modal')
 
   showNewRecipeModal.classList.add('hide')
-  modalBackground.classList.add('hide')
   
   clearModalInput()
 }
@@ -119,4 +115,3 @@ function handleModalAcceptClick() {      //not working
 var addrecipeButtons = document.getElementById('modal-accept')
 console.log(addrecipeButtons)
 addrecipeButtons.addEventListener('click', handleModalAcceptClick)
-//complete the rest later
