@@ -2,6 +2,7 @@
  into index html*/
 
  
+ 
 function insertNewRecipe(name, cooktime, imageURL,instructions){
 
     var newRecipeContent = {
@@ -13,7 +14,7 @@ function insertNewRecipe(name, cooktime, imageURL,instructions){
 
     var newRecipeHTML = Handlebars.templates.newRecipe(newRecipeContent)
 
-    var recipeContainer = document.getElementsByClassName('recipes')
+    var recipeContainer = document.querySelector('.recipes')
     recipeContainer.insertAdjacentHTML('beforeend', newRecipeHTML)
 }
 
@@ -38,6 +39,7 @@ if(headerClick){
 
 function handleModalAcceptClick() {      //not working
 
+
   var photoURLNew = document.getElementById('recipe-photo-input').value.trim();
   var instructionsNew = document.getElementById('recipe-instructions-input').value.trim();
   var nameNew = document.getElementById('recipe-name-input').value;
@@ -46,9 +48,9 @@ function handleModalAcceptClick() {      //not working
   if (!photoURLNew || !instructionsNew ||!nameNew ||! cooktimeNew) {
     alert("You must fill in all of the fields!");
   } else {
-    //this code is what is cited by the browser as not working when we try to make a new recipe
+
     var req = new XMLHttpRequest()
-    var url = '/recipe/2' //we know that this is wrong for a matter of fact
+    var url = '/recipes/2' //we know that this is wrong for a matter of fact
     console.log("== url:", url)
     req.open('POST', url)
     var recipeObj = {
@@ -73,11 +75,16 @@ function handleModalAcceptClick() {      //not working
     req.setRequestHeader('Content-Type', 'application/json')
     req.send(reqBody)
     console.log(reqBody)
-   
+
 
   }
+};
 
-}
+
+
+  
+
+
 
 var addrecipeButtons = document.getElementById('modal-accept')
 console.log(addrecipeButtons)
