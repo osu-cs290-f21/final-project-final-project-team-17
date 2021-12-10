@@ -131,6 +131,17 @@ a{
   margin-left: 15px;
 }
 
+.modal-body {
+  margin-top: -30px;
+  padding-bottom: 30px;
+}
+
+#recipe-instructions-input {
+  height: 200px;
+  width: 400px;
+  resize: none;
+}
+
 #createTitle {
   margin-left: 40px;
 }

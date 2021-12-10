@@ -51,6 +51,7 @@ function handleModalAcceptClick() {      //not working
     var url = '/recipe/2' //we know that this is wrong for a matter of fact
     console.log("== url:", url)
     req.open('POST', url)
+    
     var recipeObj = {
       name: nameNew,
       cooktime: cooktimeNew,
