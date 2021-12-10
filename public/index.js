@@ -29,19 +29,6 @@ function openModal() {
   modalBackground.classList.remove('hide')
 }
 
-function closeModal() {
-  var modalBackground = document.getElementById('modalBackdrop')
-  var showNewRecipeModal = document.getElementById('creatingRecipe-modal')
-
-  showNewRecipeModal.classList.add('hide')
-  modalBackground.classList.add('hide')
-}
-
-var openInputModalButton = document.getElementById("recipeButton")
-if(openInputModalButton) {
-  openInputModalButton.addEventListener("click", openModal)
-}
-
 function clearModalInput() {
   var modalTextInputs = [
     document.getElementById('recipe-name-input'),
@@ -55,16 +42,29 @@ function clearModalInput() {
   })
 }
 
+function closeModal() {
+  var modalBackground = document.getElementById('modalBackdrop')
+  var showNewRecipeModal = document.getElementById('creatingRecipe-modal')
+
+  showNewRecipeModal.classList.add('hide')
+  modalBackground.classList.add('hide')
+  
+  clearModalInput()
+}
+
+var openInputModalButton = document.getElementById("recipeButton")
+if(openInputModalButton) {
+  openInputModalButton.addEventListener("click", openModal)
+}
+
 var closeInputButton = document.getElementById("modal-close")
 if(closeInputButton){
   closeInputButton.addEventListener("click", closeModal)
-  clearModalInput()
 }
 
 var closeInputButton = document.getElementById("modal-cancel")
 if(closeInputButton){
   closeInputButton.addEventListener("click", closeModal)
-  clearModalInput()
 }
 
 var headerClick = document.getElementById("headTitle")
