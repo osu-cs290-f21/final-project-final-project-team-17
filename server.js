@@ -2,6 +2,8 @@ var path = require('path')
 var express = require('express')
 var exphbs = require('express-handlebars')
 var recipeData = require('./recipeData.json')
+var fs = require('fs');
+var bodyParser = require('body-parser')
 var app = express()
 var port = process.env.PORT || 3000;
 
@@ -19,6 +21,7 @@ app.get('/', function(req, res, next){
     console.log ("data", recipeData)
 })
 
+app.use(bodyParser.json());
 app.get('/recipes/:recipeArr', function(req, res, next){
     var recipeArr = req.params.recipeArr;
     console.log('-- recipeArr: ', recipeArr)
@@ -29,6 +32,31 @@ app.get('/recipes/:recipeArr', function(req, res, next){
         next();
     }
 })
+
+app.post('/', function (req, res, next) {
+  var instructions = req.body.instructions
+  var cooktime = req.body.cooktime
+  var photoURL = req.body.photoURL
+  var name = req.body.name
+      recipeData.push({
+        name: name,
+        cooktime: cooktime,
+        photoURL: photoURL,
+        instructions: instructions
+      })
+      console.log('latest',recipeData)
+      fs.writeFile( __dirname + '/recipeData.json', JSON.stringify(recipeData), function (err) {
+          if (!err) {
+            res.status(200).send("Photo was successfully stored.")
+          } else {
+            res.status(500).send("Error storing photo in DB.")
+          }
+        }
+      )
+
+    next()
+  })
+
 
 app.get('/about', function (req, res){
     res.status(200).render('aboutus');

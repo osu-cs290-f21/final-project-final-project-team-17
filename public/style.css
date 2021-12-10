@@ -86,7 +86,25 @@ a{
   border: 1px solid grey;
   cursor: pointer;
 }
+#random{
+  padding: 0px 50px;
+  background: #e04834;
+  color: rgb(255, 228, 228);
+  border: none;
+  width: 225px;
+  height: 100%;
+  font-size: 20px;
+  height: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  padding-bottom: 10px;
+}
 
+#random:hover {
+  border: 1px solid grey;
+  cursor: pointer;
+}
 .content {
   display: flex;
 }
