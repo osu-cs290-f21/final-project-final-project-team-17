@@ -26,7 +26,7 @@
             </nav>
             <nav id = "navBar" class = "navBarStuff">
                 <ul>
-                    <li id = "button"><a href="http://localhost:3000/creating">new Recipe</a><li>
+                    <button id = "recipeButton">new Recipe</button>
                 </ul>
             </nav>
             <nav id = "navBar" class = "navBarStuff">
@@ -39,6 +39,44 @@
 
     </body>
 
+    <div id="creatingRecipe-modal" class="hide">
+     <div id="modal-dialog" class="hide">
 
+       <div class="modal-header">
+         <button type="button" id="modal-close" class="modal-hide-button">&times;</button>
+         
+         <h2 id = "createTitle">Creating New Recipe</h2>
+       </div>
+
+       <div class="modal-body">
+
+         <div class="recipe-input-element">
+           <label for="recipe-name-input">Food name</label>
+           <input type="text" id="recipe-name-input"></input>
+         </div>
+
+         <div class="recipe-input-element">
+           <label for="recipe-photo-input">Image URL</label>
+           <input type="text" id="recipe-photo-input">
+         </div>
+
+         <div class="recipe-input-element">
+           <label for="recipe-cooktime-input">Cooktime</label>
+           <input type="number" id="recipe-cooktime-input">
+         </div>
+
+         <div class="recipe-input-element">
+           <label for="recipe-instructions-input">Instructions</label>
+           <textarea type="text" id="recipe-instructions-input"> </textarea>
+         </div>
+       </div>
+
+       <div class="modal-footer">
+         <button type="button" id="modal-cancel" class="modal-hide-button">Cancel</button>
+         <button type="button" id="modal-accept" class="action-button">Create</button>
+       </div>
+
+     </div>
+   </div>
 
 </html>

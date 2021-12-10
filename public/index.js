@@ -21,14 +21,35 @@ function backToMainPage(){
   location.href = "http://localhost:3000/"      //how to not hard code this
 }
 
-var cancelInputButton = document.getElementById("modal-cancel")
-if(cancelInputButton){
-  cancelInputButton.addEventListener("click", backToMainPage)
+function openModal() {
+  var showNewRecipeModal = document.getElementById('modal-dialog')
+  var modalBackground = document.getElementById('creatingRecipe-modal')
+
+  showNewRecipeModal.classList.remove('hide')
+  modalBackground.classList.remove('hide')
+}
+
+function closeModal() {
+  var showNewRecipeModal = document.getElementById('modal-dialog')
+  var modalBackground = document.getElementById('creatingRecipe-modal')
+
+  showNewRecipeModal.classList.add('hide')
+  modalBackground.classList.add('hide')
+}
+
+var openInputModalButton = document.getElementById("recipeButton")
+if(openInputModalButton) {
+  openInputModalButton.addEventListener("click", openModal)
 }
 
 var closeInputButton = document.getElementById("modal-close")
 if(closeInputButton){
-  closeInputButton.addEventListener("click", backToMainPage)
+  closeInputButton.addEventListener("click", closeModal)
+}
+
+var closeInputButton = document.getElementById("modal-cancel")
+if(closeInputButton){
+  closeInputButton.addEventListener("click", closeModal)
 }
 
 var headerClick = document.getElementById("headTitle")
