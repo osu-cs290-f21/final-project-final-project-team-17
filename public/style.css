@@ -41,7 +41,7 @@ li a {
 }
 
 li a:hover {
-  border: 2px solid gray
+  border: 2px solid gray;
 }
 
 body {
@@ -80,6 +80,10 @@ a{
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
   padding-bottom: 10px;
+}
+
+#recipeButton:hover {
+  border: 1px solid grey;
 }
 
 .content {
